@@ -15,10 +15,10 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        username: **dockeruser123**
-        password: **s3cr3tp4ssw0rd**
-        registry: docker.io
-        repository: **my-org/my-app**
+        username: **hami98**
+        password: **Hamster19981226!**
+        registry: **docker.io**
+        repository: **hami98/hazi-feladat**
         file: ./Dockerfile
 
     - name: Scan image for vulnerabilities

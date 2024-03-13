@@ -17,7 +17,7 @@ jobs:
       with:
         username: hami98
         password: Hamster19981226!
-        registry: **docker.io**
+        registry: docker.io
         repository: hami98/hazi-feladat
         file: ./Dockerfile
 

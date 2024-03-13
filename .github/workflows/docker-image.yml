@@ -15,8 +15,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        username: **hami98**
-        password: **Hamster19981226!**
+        username: hami98
+        password: Hamster19981226!
         registry: **docker.io**
         repository: **hami98/hazi-feladat**
         file: ./Dockerfile

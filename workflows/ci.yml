@@ -24,4 +24,4 @@ jobs:
     - name: Scan image for vulnerabilities
       uses: trivy/trivy-action@v2
       with:
-        image: docker.io/my-org/my-app:latest
+        image: docker.io/hami98/hazi-feladat:latest

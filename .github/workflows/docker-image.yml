@@ -18,7 +18,7 @@ jobs:
         username: hami98
         password: Hamster19981226!
         registry: docker.io
-        repository: hami98/hazi-feladat
+        repository: hami98/hazi-feladat  
         file: ./Dockerfile
 
     - name: Scan image for vulnerabilities

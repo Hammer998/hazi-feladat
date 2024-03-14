@@ -21,7 +21,4 @@ jobs:
         repository: hami98/hazi-feladat  
         file: ./Dockerfile
 
-    - name: Scan image for vulnerabilities
-      uses: trivy/trivy-action@v2
-      with:
-        image: docker.io/hami98/hazi-feladat:latest
+ 

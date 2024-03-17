@@ -28,7 +28,7 @@ jobs:
         with:
             username: hami98
             password: Hamster19981226!
-            registry: https://hub.docker.com/
+            registry: https://hub.docker.com/repository/docker/hami98/hazi-feladat/general
             image: webapp-alkalmazas
 
      

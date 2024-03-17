@@ -23,13 +23,14 @@ jobs:
           dockerfile: Dockerfile
 
       # Push a Docker image-et a Docker Hubra
-      - name: Push Docker image to Docker Hub
+      - name: docker/push-action
         uses: docker/push-action@v2
         with:
-          username: hami98
-          password: Hamster19981226!
-          registry: https://hub.docker.com/
-          image: webapp-alkalmazas
+          docker:
+            username: hami98
+            password: Hamster19981226!
+            registry: https://hub.docker.com/
+            image: webapp-alkalmazas
 
      
 

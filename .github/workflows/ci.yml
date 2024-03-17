@@ -26,7 +26,6 @@ jobs:
       - name: docker/push-action
         uses: docker/push-action@v2
         with:
-          docker:
             username: hami98
             password: Hamster19981226!
             registry: https://hub.docker.com/

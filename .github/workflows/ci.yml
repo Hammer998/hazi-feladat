@@ -21,4 +21,41 @@ jobs:
         repository: hami98/hazi-feladat  
         file: ./Dockerfile
 
+name: CI/CD pipeline NodeJS alkalmazáshoz
+
+on:
+  # Push események a master branchre
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout a kódot
+      - uses: actions/checkout@v2
+
+      # Docker image build
+      - name: Build Docker image
+        uses: docker/build-push-action@v2
+        with:
+          username: hami98
+          password: Hamster19981226!
+          registry: https://hub.docker.com/
+          image: webapp-alkalmazas
+          dockerfile: Dockerfile
+
+      # Push a Docker image-et a Docker Hubra
+      - name: Push Docker image to Docker Hub
+        uses: docker/push-action@v2
+        with:
+          username: hami98
+          password: Hamster19981226!
+          registry: https://hub.docker.com/
+          image: webapp-alkalmazas
+
+     
+
  

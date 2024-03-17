@@ -23,7 +23,7 @@ jobs:
           dockerfile: Dockerfile
 
       # Push a Docker image-et a Docker Hubra
-      - name: docker push hami98/hazi-feladat
+      - name: docker/push-action
         uses: docker/push-action@v2
         with:
             username: hami98

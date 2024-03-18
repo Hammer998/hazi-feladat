@@ -1,21 +1,24 @@
-name: Docker Image CI
+name: NodeJS Docker Hub pipeline
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build https://github.com/Hammer998/hazi-feladat/webapp/Dockerfile --tag my-image-name:$(date +%s)
+      - uses: actions/checkout@v2
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          repository: your-docker-hub-username/your-app-name
+          tag: latest
     
 
      

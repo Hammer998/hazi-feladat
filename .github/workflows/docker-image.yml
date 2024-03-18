@@ -17,5 +17,7 @@ jobs:
         with:
           username: hami98
           password: Hamster19981226!
-          repository: https://github.com/Hammer998/hazi-feladat/tree/main/webapp
+          repository: https://github.com/Hammer998/hazi-feladat/
           tag: latest
+    script:
+    - docker build -t my-webapp -f  https://github.com/Hammer998/hazi-feladat/

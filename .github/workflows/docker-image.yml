@@ -17,5 +17,5 @@ jobs:
         with:
           username: hami98
           password: Hamster19981226!
-          repository: hami98/my-node-app
+          repository: https://github.com/Hammer998/hazi-feladat/tree/main/webapp
           tag: latest

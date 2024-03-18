@@ -19,6 +19,6 @@ jobs:
           password: Hamster19981226!
           repository: https://github.com/Hammer998/hazi-feladat/
           tag: latest
-          working-directory: ./webapp 
+          working-directory: ./app 
 
     

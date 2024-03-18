@@ -19,5 +19,4 @@ jobs:
           password: Hamster19981226!
           repository: https://github.com/Hammer998/hazi-feladat/
           tag: latest
-    script:
-    - docker build -t my-webapp -f  https://github.com/Hammer998/hazi-feladat/
+    

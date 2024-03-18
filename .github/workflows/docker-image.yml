@@ -1,22 +1,21 @@
+name: NodeJS Docker Hub pipeline
+
 on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-
-
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    
+    steps:
+      - uses: actions/checkout@v2
 
-  steps:
-    uses: actions/checkout@v2
-
-   
-    - name: Build Docker image
-      run: docker build -t my-node-app .
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          username: hami98
+          password: Hamster19981226!
+          repository: hami98/my-node-app
+          tag: latest

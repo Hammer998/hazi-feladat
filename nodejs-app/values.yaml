@@ -1,0 +1,2 @@
+image: "docker.io/library/node:18"
+port: 8080

@@ -1,24 +1,23 @@
-name: NodeJS Docker Hub pipeline
+name: Docker Build
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v2
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
-          repository: your-docker-hub-username/your-app-name
-          tag: latest
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Build Docker image
+      run: docker build -t my-node-app .
     
 
      

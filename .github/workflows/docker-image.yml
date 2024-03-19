@@ -24,5 +24,8 @@ jobs:
 
 
       - name: Push image to Docker Hub
-        run: docker push hami98/hazi-feladat:latest         
+        run: |
+            docker tag my-webapp-image hami98/hazi-feladat:latest
+            docker push hami98/hazi-feladat:latest
+            
     

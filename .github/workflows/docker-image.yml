@@ -16,7 +16,14 @@ jobs:
         run: docker build -t my-webapp-image -f webapp/Dockerfile .
 
       - name: Checks vulnerability
-        run: docker run --rm -v ./workdirlocal:/workdirdocker -w /workdirdocker aquasec/trivy my-webapp-image:latest
+        run: docker save -o test.tar my-webapp-image 
+      
+      - name: Scanning
+        uses: aquasecurity/trivy-action@master 
+        with: 
+          input: /github/workspace/test.tar
+          severity: 'CRITICAL,HIGH'
+
       
       
       - name: Login to Docker Hub
